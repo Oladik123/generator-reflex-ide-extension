@@ -1,0 +1,1 @@
+export * from './ui-vlados-test-extension-protocol';
