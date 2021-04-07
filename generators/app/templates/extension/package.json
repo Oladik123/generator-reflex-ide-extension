@@ -1,0 +1,31 @@
+{
+  "name": "ui-vlados-test-extension",
+  "keywords": [
+    "theia-extension"
+  ],
+  "version": "0.0.0",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "dependencies": {
+    "@theia/core": "latest",
+    "ast-service": "0.0.0"
+  },
+  "devDependencies": {
+    "rimraf": "latest",
+    "typescript": "latest"
+  },
+  "scripts": {
+    "prepare": "yarn run clean && yarn run build",
+    "clean": "rimraf lib",
+    "build": "tsc",
+    "watch": "tsc -w"
+  },
+  "theiaExtensions": [
+    {
+      "frontend": "lib/browser/ui-vlados-test-extension-frontend-module",
+      "backend": "lib/node/ui-vlados-test-extension-backend-service-module"
+    }
+  ]
+}
